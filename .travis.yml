@@ -6,30 +6,10 @@ before_install:
   - gem update --system $(ruby -e "puts '2.7.8' if ENV['RUBY_VERSION'] >= '2.3.0'")
   - gem update bundler
 rvm:
-  - 1.8.7
-  - ree
-  - 1.9.2
-  - 1.9.3
-  - 2.0.0
-  - 2.1
-  - 2.2.10
-  - 2.3.7
-  - 2.4.4
-  - 2.5.1
-  - jruby-18mode
-  - jruby-19mode
-  - rbx-2
-  - rbx-head
-  - jruby-head
-  - ruby-head
+  - 2.6.6
+  - truffleruby-head
+  - truffleruby
+
 env:
   - RSPEC_BRANCH=master
   - RSPEC_BRANCH=2-99-maintenance
-matrix:
-  allow_failures:
-    - rvm: rbx-2
-    - rvm: jruby-head
-    - rvm: rbx-head
-    - rvm: ruby-head
-  fast_finish: true
-
